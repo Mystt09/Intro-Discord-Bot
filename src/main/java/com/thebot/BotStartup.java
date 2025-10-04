@@ -33,7 +33,7 @@ import io.github.cdimascio.dotenv.Dotenv;
         //String token = dotenv.get("DISCORD_BOT_TOKEN");
         JDABuilder jda = JDABuilder.createDefault(TOK);
         jda.enableIntents(GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_MESSAGES);
-        jda.addEventListeners(new MessageEventListener());
+       
         jda.addEventListeners(new Commands());
 
         jda.setActivity(Activity.playing("tic tac toe"));
